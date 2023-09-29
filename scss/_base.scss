@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  min-width: 320px;
+}
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 173.5%;
+  color: $main-color;
+  background-color: $bg-color;
+  /*@media (max-width: 540px) {
+    line-height: 145%;
+    font-size: 14px;
+  }*/
+}
+.container {
+  max-width: 1600px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  margin: 0;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+.section-title{
+  font-family: Ramabhadra;
+  font-size: 100px;    
+  font-weight: 400; 
+  line-height: 125%;  
+  text-transform: uppercase;
+  color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px $main-color;
+  text-stroke: 1px $main-color;
+  text-shadow: none;
+  margin: 0;
+}

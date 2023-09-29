@@ -1,0 +1,86 @@
+.header {  
+    min-height: 115px;
+    margin-bottom: 74px;
+   &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   }     
+
+    &__buy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 28px;
+        padding-right: 23px;
+        margin-left: 8px;
+        position: relative;
+        span{
+            font-size: 24px;
+        }
+        &::before{ 
+            position: absolute;           
+            content:url('./images/dropdown.svg');            
+            width: 16px;
+            height: 10px;
+            top: -3%;
+            right: -5px
+        }
+    }
+
+    &__buy-link {
+        position: relative;
+        display: inline-flex;
+        span{
+            position: absolute;           
+            font-family: Poppins;
+            font-size: 10px;            
+            font-weight: 700;
+            color: $main-color;
+            font-family: $main-font;
+            background-color: #FF0033;
+            width: 12px;
+            height: 12px;
+            top: 16%;
+            right: -10%;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+    }  
+
+    &__buy-user {
+        display: inline-block;
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        padding: 3px;
+        border: 1px solid $accent-color;           
+      
+    }
+}
+
+.nav {
+    margin: 0 10px;
+    &__list {
+        display: flex;
+        gap: 100px;
+    }   
+
+    &__list-link {
+        color: $main-color;       
+        font-family: $header-font;
+        font-size: 20px;  
+        transition: $transition;     
+        &:hover{
+            color: $accent-color;
+        }
+    }
+}
+.header__buy-link.header__buy-link--on{
+    span{
+        display: inline-flex;}
+   }

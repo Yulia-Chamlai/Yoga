@@ -1,0 +1,136 @@
+.workshop {
+    margin-bottom: 65px;   
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 70px;
+    }
+
+    &__item {
+        text-align: center;
+        position: relative; 
+        transition:  all 0.5s; 
+        max-height: 600px;
+       
+        &:hover{
+            .workshop__item-box::before{
+                background: linear-gradient(180deg, rgba(8, 12, 20, 0.00) 0%, 
+                 #080C14 87.86%);
+            }
+            .workshop__date{
+                opacity: 1;
+                visibility: visible;
+            }
+            .workshop__level{
+                opacity: 1;
+                visibility: visible;
+            }
+        }                  
+    }
+    &__item-box{
+        position: relative;
+        z-index: -1;        
+        &::before{
+        position: absolute;
+        content: '';
+        border-radius: 5px;
+        background: rgba(#000000, 0.5);
+        // background: linear-gradient(180deg, rgba(8, 12, 20, 0.00) 0%, 
+        // #080C14 87.86%);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        }
+        &:hover::before{
+            background: transparent;
+        }
+    }
+    &__img {
+        max-width: 695px;
+        height: 600px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+       
+    }
+    &__item-info{
+        position: relative;
+        z-index: 2;
+        top: -34%;
+        padding: 0 50px 38px 50px;
+    }
+    &__item-title{
+        font-size: 35px;
+        font-weight: 500;
+        color: $accent-color;
+        margin-bottom: 15px;
+    }
+    &__descr {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 33px;
+    }
+    &__buy-link {
+        display: inline-block;
+        background-color: $accent-color;
+        color: $main-color;
+        max-width: 280px;
+        width: 100%;
+        padding: 15px 75px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 10px;
+        margin-right: 25px;
+    }
+    &__link {
+        display: inline-block;
+        background-color: #233133;
+        color: $main-color;
+        max-width: 280px;
+        width: 100%;
+        padding: 15px 75px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 10px;       
+    }
+
+    &__date {
+        background-color: $accent-color;
+        font-size: 30px;
+        font-family: $sectiontitle-font;
+        display: inline-block;
+        padding: 16px 22px 7px;
+        text-align: center;
+        max-width: 226px;
+        border-radius: 0 0 10px 10px;
+        position: absolute;
+        top: 0;
+        left: 38px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__level {
+        background-color: $accent-color;
+        font-size: 35px;
+        text-transform: uppercase;
+        font-family: $sectiontitle-font;
+        display: inline-block;
+        padding: 10px 24px 5px;
+        text-align: center;
+        max-width: 232px;
+        border-radius: 28px 28px 0 0;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 120px;
+        right: -139px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
