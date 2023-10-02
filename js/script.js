@@ -30,3 +30,27 @@ $(".top__slider").slick({
     prevArrow: '<button class="teacher__dots-btn teacher__dots-btn--left"><img class="teacher__dots-arrow" src="./images/pagin-arrow-left.svg" alt="arrow"></button>',
     nextArrow: '<button class="teacher__dots-btn teacher__dots-btn--right"><img class="teacher__dots-arrow" src="./images/pagin-arrow-right.svg" alt="arrow"></button>',
   });
+  $(".courses__slider").slick({
+    infinite:true,
+    centerMode: true, 
+    variableWidth: true,
+    centerPadding: '40px',
+    focusOnSelect: true,   
+    slidesToShow: 1,   
+    slidesToScroll:1, 
+    slide:'.courses__slider-item', 
+    asNavFor:".courses__dots",
+    arrows: false,
+    adaptiveHeight: true
+  });
+  $(".courses__dots").slick({
+    infinite:true,      
+    slidesToShow: 1,   
+    slidesToScroll:1, 
+    fade:true,
+    asNavFor:".courses__slider",
+    centerMode: true,
+    focusOnSelect: true,    
+    prevArrow: '<button class="courses__dots-btn courses__dots-btn--left"><img class="courses__dots-arrow" src="./images/pagin-arrow-left.svg" alt="arrow"></button>',
+    nextArrow: '<button class="courses__dots-btn courses__dots-btn--right"><img class="courses__dots-arrow" src="./images/pagin-arrow-right.svg" alt="arrow"></button>',
+  });

@@ -1,0 +1,36 @@
+.footer {
+    &__top {
+        background-color: #233133;
+        padding: 33px 0;
+        text-align: center;
+    }
+
+    &__social {
+        flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       gap: 42px;
+       margin-bottom: 40px;
+    }
+    
+    &__bottom {
+        text-align: center;
+        padding: 18px 0;
+        font-size: 25px;
+    }
+    .social__link{
+        width: 69px;
+        height: 69px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $accent-color;
+    }
+    .nav{
+        margin: 0 auto;
+        &__list{
+            justify-content: center;
+        }
+    }
+}

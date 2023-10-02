@@ -15,12 +15,22 @@
     &__item {
         display: flex;
         max-width: 381px;
-        width: 100%;        
-        opacity: 0.4;        
+        width: 100%;              
         transition: all 0.5s;
         position: relative;
-        &:hover{                    
-            opacity: 1;                    
+        &::before{
+            position: absolute;
+            content: '';
+            background:rgba(#000000, 0.7);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        &:hover{ 
+            &::before{
+                opacity: 0;
+            }                   
             .teacher__social{
                 opacity: 1;
                 visibility: visible;
@@ -57,17 +67,12 @@
         font-size: 15px;
     }
 
-    &__social {
+    &__social { 
         background-color: $accent-color;
         border-radius: 28px 0px 0px 28px;
         padding: 18px 10px;
         width: 80px;
-        height: 232px;        
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        height: 232px;       
         opacity: 0; 
         visibility: hidden; 
         transition: all 0.3s;    
@@ -75,42 +80,14 @@
         top: 0px;
         right: 0px;
         z-index: 3;
-    }
-
-    &__social-item {
-        transition: all 0.3s;
-        &:hover{
-            transform: scale(1.2);
-        }
-    }
+    }    
 }
-.slick-slide{
-    transform: scale(0.8);
-    transition: all 0.4s ease-in-out;
-    padding: 49px 0;
-}
-.slick-slide img{
-    max-width: 100%;
-    transition: all 0.4s ease-in-out;
-}
-.slick-center{
-    transform: scale(1.1);
-}
-.customPaging{
-    display: block;
-    width: 100% ;
-}
-
 .teacher{
     &__dots{
         display: flex;
         text-align: center;
         position: relative;         
-    }
-    &__dots-item{
-        font-size: 20px;
-        color: #626262;
-    }
+    }    
     &__dots-btn{
         background-color: transparent;
         color: $main-color;

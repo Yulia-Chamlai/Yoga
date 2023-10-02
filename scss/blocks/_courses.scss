@@ -1,0 +1,183 @@
+.courses {
+    margin-bottom: 42px;
+    &__title{
+        text-align: center;
+        margin-bottom: 64px;
+    }
+    &__inner {  
+        max-width: 1920px;
+        margin: 0 auto 45px;     
+    }
+
+    &__slider {
+        max-width: 1920px;
+        margin: 0 auto;
+        max-height: 715px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__slider-item {
+        max-width: 1203px;     
+        width: 100%;
+        position: relative;
+        &:hover{
+            .courses__level{
+                opacity: 1;
+                visibility: visible;
+                top: 166px;
+            }
+        }
+    }
+
+    &__image-box {
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            border-radius: 5px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 87.86%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__img {
+        display: block;
+        border-radius: 5px;
+        max-width: 1203px;
+        width: 100%;
+        min-height: 715px;
+    }
+
+    &__info-box {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 165px;
+    }
+
+    &__info-title {
+        font-size: 30px;
+        color: $accent-color;
+        margin-bottom: 18px;
+        font-weight: 500;
+    }
+
+    &__teacher-name {
+        font-size: 30px;
+        font-weight: 500;
+        padding-left: 44px;
+        display: inline-block;
+        margin-bottom: 41px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('./images/user.svg');
+            background-repeat: no-repeat;
+            left: -5px;
+            top: -5px;
+            width: 42px;
+            height: 42px;
+        }
+    }
+    &__btn-box{
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90px;
+    }
+    &__buy-link {
+        display: inline-block;
+        background-color: $accent-color;
+        color: $main-color;
+        max-width: 280px;
+        width: 100%;
+        padding: 15px 45px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 10px;
+        margin-right: 25px;
+    }   
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        background-color: #233133;
+        color: $main-color;
+        max-width: 280px;
+        width: 100%;
+        padding: 15px 27px 15px 81px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 10px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('./images/next-arrow.svg');
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 16px;
+            top: 50%;
+            right: 95px;
+            transform: translateY(-50%);
+        }
+    }
+    &__level{
+        position: absolute;
+        top: 120px;
+        right: -139px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .slick-center{
+        .courses__info-box{
+            bottom: 197px;
+        }
+        .courses__btn-box{
+            bottom: 145px;
+        }
+    }   
+}
+
+.courses{
+    &__dots{
+        display: flex;
+        text-align: center;
+        position: relative;         
+    }
+    &__dots-btn{
+        background-color: transparent;
+        color: $main-color;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        position: absolute;
+        top: 37%;  
+        z-index: 5;
+        // transition:  all 0.3s;  
+        // &:hover{
+        //     color: $accent-color;
+        // }    
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    &__dots-btn--left{
+        left: 45%;
+    }
+    &__dots-btn--right{
+        right: 45%;
+    }
+}
+.courses__dots.pagination__slider{
+    margin-top: 49px;
+}
