@@ -1,0 +1,116 @@
+.product {
+    margin-bottom: 80px;
+    &__title {
+        text-align: center;
+        margin-bottom: 62px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        border-radius: 15px;  
+        position: relative;
+        &:hover{
+            .product__item-price{
+                color: $main-color;  
+            }
+            .product__item-name{
+                background-color: $accent-color;
+            }
+            .product__item-link{
+                border: 1px solid $accent-color;
+            }
+        }      
+    }
+    &__item{
+        overflow: hidden;
+        .stripe{
+            position: absolute;            
+            background-color: $main-color;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-family: $sectiontitle-font;
+            color: #233133;
+            width: 182px;
+            height: 30px;
+            top: 39px;
+            right: -38px;
+            transform: rotate(45deg);
+        }        
+    }
+    &__item-name {
+        background-color: #233133;
+        text-align: center;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-family: $sectiontitle-font;
+        padding: 37px 0 37px;
+        border-bottom: 1px solid #000;
+    }
+
+    &__item-quantity {
+        margin-bottom: 20px;
+        span{
+            width: 38px;
+            height: 38px;
+            background-color: #233133;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+        }
+    }
+    &__item-price {
+        font-size: 60px;
+        color: $accent-color;        
+    }   
+
+    &__item-descr {
+        background-color: #233133;
+        padding-bottom: 23px;
+    }
+
+    &__item-list {
+      padding: 20px 25px 30px;
+    }
+    &__item-point {
+        font-size: 30px;
+        line-height: 181%;
+        padding-left: 50px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: url('./images/check.svg');
+            width: 28px;
+            height: 28px;
+            background-repeat: no-repeat;
+            top: 6px;
+            left: 0;
+        }
+    }
+    &__item-point.disabled{
+        opacity: 0.25;
+        &::before{
+            opacity: 0;
+        }
+    }
+    &__item-link {
+        max-width: 280px;
+        width: 100%;
+        padding: 15px;
+        font-size: 25px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid #525252;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(16%);
+        border-radius: 10px;
+    }    
+}
+
