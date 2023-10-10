@@ -1,6 +1,13 @@
 .top {    
     &__title {
         max-width: 1133px;
+        @media(max-width:1600px){
+            font-size: 60px;
+            max-width: 990px;
+        }
+        @media(max-width:1376px){            
+            max-width: 740px;
+        }
         span{
             color: #48B84A;
             font-family: $main-font;
@@ -13,10 +20,17 @@
             text-shadow: none;
             margin-top: -22px;
             display: inline-block;
+            @media(max-width:1600px){
+                font-size: 80px;
+                margin-top: 0;
+            }
         }
         &-box{
             display: flex;
             gap: 110px;
+            @media(max-width:1376px){            
+                gap: 30px;
+            }
         }
     } 
     &__benefit{
@@ -32,6 +46,10 @@
         outline: 1px solid #080C14;
         outline-offset: -8px;
         position: relative;
+        @media(max-width:1600px){
+            margin-left: auto;
+            margin-right: 30px;
+        }
         span{
             background-color: $accent-color;
             width: 68px;
@@ -66,6 +84,9 @@
         margin-left: auto;
         margin-top: -20px;
         font-size: 25px;
+        @media(max-width:1600px){
+            margin-top: 0;
+        }
     } 	
 
     &__content {
@@ -74,6 +95,9 @@
         padding-bottom: 33px;
         position: relative;
         margin-bottom: 60px;
+        @media(max-width:1376px){            
+           display: block;
+        }
     }
    
     &__descr {
@@ -84,6 +108,9 @@
         flex-direction: column;
         justify-content: flex-end;
         padding-bottom: 33px;
+        @media(max-width:1376px){            
+            max-width: 740px;
+        }
     }
 
     &__descr-title {

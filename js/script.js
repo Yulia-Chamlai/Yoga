@@ -54,3 +54,17 @@ $(".top__slider").slick({
     prevArrow: '<button class="courses__dots-btn courses__dots-btn--left"><img class="courses__dots-arrow" src="./images/pagin-arrow-left.svg" alt="arrow"></button>',
     nextArrow: '<button class="courses__dots-btn courses__dots-btn--right"><img class="courses__dots-arrow" src="./images/pagin-arrow-right.svg" alt="arrow"></button>',
   });
+  const menuBtn = document.querySelector('.header__menu');
+  const navList = document.querySelector('.header__nav');
+  const listItem = document.querySelectorAll('.nav__list-item');
+
+  menuBtn.addEventListener('click', function(){
+    menuBtn.classList.toggle('active');
+    navList.classList.toggle('active');    
+  });
+  listItem.forEach(function(item){
+    item.addEventListener('click', function(){
+      navList.classList.remove('active');
+      menuBtn.classList.remove('active');
+    })
+  })
