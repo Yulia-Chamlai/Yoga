@@ -3,9 +3,25 @@ $(".top__slider").slick({
     speed: 500,
     fade: true,
     slidesToScroll: 1,
+    slidesToShow: 1,
+    //variableWidth:true,
+    //centerMode: true,
     prevArrow: '<button class="top__slider-btn top__slider-btn--prev"><img class="top__slider-arrow" src="./images/prev-arrow.svg" alt="arrow"></button>',
     nextArrow: '<button class="top__slider-btn top__slider-btn--next"><img class="top__slider-arrow" src="./images/next-arrow.svg" alt="arrow"></button>',
-    
+    responsive: [      
+      {
+        breakpoint: 479,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode:true,
+          variableWidth:true,
+          fade:false,
+          adaptiveHeight: true,
+        }
+      }
+     
+    ]
   });
   $(".teacher__slider").slick({
     //infinite:true,
@@ -17,7 +33,33 @@ $(".top__slider").slick({
     slide:'.teacher__item', 
     asNavFor:".teacher__dots",
     arrows: false,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [      
+      {
+        breakpoint: 1379,
+        settings: {
+          slidesToShow: 4,         
+        }
+      },
+      {
+        breakpoint: 1141,
+        settings: {
+          slidesToShow: 3,         
+        }
+      },
+      {
+        breakpoint: 811,
+        settings: {
+          slidesToShow: 2,         
+        }
+      },
+      {
+        breakpoint: 441,
+        settings: {
+          slidesToShow: 1,         
+        }
+      },
+    ]
   });
   $(".teacher__dots").slick({
     infinite:true,      

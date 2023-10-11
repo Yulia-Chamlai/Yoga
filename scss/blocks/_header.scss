@@ -1,6 +1,9 @@
 .header {  
     min-height: 115px;
     margin-bottom: 74px;
+    @media(max-width:578px){            
+        margin-bottom: 40px;
+     }
    &__inner{
     display: flex;
     justify-content: space-between;
@@ -96,12 +99,15 @@
         right: 0;
         bottom: 0;
         z-index: 4;
-        background-color: #3c663d75;
+        background-color: #3c663d;
         transform: translateY(0);
         .nav__list{            
             display: flex;
             flex-direction: column;         
             
+        }
+        .nav__list-link{
+            font-size: 26px;
         }
     }
     .nav__list{

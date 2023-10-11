@@ -1,8 +1,25 @@
 .teacher {
     margin-bottom: 117px;
+    @media(max-width:1140px){
+        margin-bottom: 80px;
+    }    
+    @media(max-width:570px){
+        margin-bottom: 20px;
+    }    
     &__title {
         text-align: center;
         margin-bottom: 150px;
+        @media(max-width:1140px){
+            margin-bottom: 80px;
+            font-size: 70px;
+        }
+        @media(max-width:570px){           
+            font-size: 45px;
+            margin-bottom: 40px;
+        }
+        @media(max-width:470px){           
+            font-size: 30px;           
+        }
     }
 
     &__slider {
@@ -47,7 +64,10 @@
         display: block;   
         max-width: 381px;
         width: 100%;
-        height: 370px;            
+        height: 370px;   
+        @media(max-width:570px){
+            height: 280px;
+         }         
     }
     &__info {
         text-align: center;
@@ -55,16 +75,25 @@
         width: 100%;
         height: 87px;
         padding: 14px;
+        @media(max-width:570px){
+           padding: 5px;
+        }
     }
     &__name {
         color: #080C14;
         font-size: 25px;
         font-weight: 600;
         line-height: 125%;
+        @media(max-width:570px){
+            font-size: 18px;
+         }
     }
 
     &__occupation {
         font-size: 15px;
+        @media(max-width:570px){
+            font-size: 12px;
+         }
     }
 
     &__social { 
@@ -86,7 +115,18 @@
     &__dots{
         display: flex;
         text-align: center;
-        position: relative;         
+        position: relative;  
+        @media(max-width:470px){
+           height: 80px;
+         } 
+    .slick-track{
+        @media(max-width:470px){
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    }      
     }    
     &__dots-btn{
         background-color: transparent;
@@ -97,6 +137,9 @@
         position: absolute;
         top: 37%;  
         z-index: 5;
+        @media(max-width:470px){
+           top: 46%;
+          }  
         // transition:  all 0.3s;  
         // &:hover{
         //     color: $accent-color;
@@ -108,9 +151,27 @@
     }
     &__dots-btn--left{
         left: 45%;
+        @media(max-width:1140px){
+           left: 43%;
+        }
+        @media(max-width:810px){
+           left: 40%;
+        }
+        @media(max-width:470px){
+           left: 35%;
+        }
     }
     &__dots-btn--right{
         right: 45%;
-    }
+        @media(max-width:1140px){
+           right: 43%;
+        }
+        @media(max-width:810px){
+           right: 40%;
+        }
+        @media(max-width:470px){
+           right: 35%;
+        }
+    }   
 }
 
