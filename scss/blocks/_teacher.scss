@@ -21,7 +21,10 @@
             font-size: 30px;           
         }
     }
-
+    &-wrapper{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
     &__slider {
         display: flex;
         align-items: center;   
