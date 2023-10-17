@@ -34,9 +34,9 @@
             background: url('./images/decor.svg');
             background-repeat: no-repeat;
             top: -294px;
-            right: -209px;
+            right: 0;
             height: 1079px;
-            width: 663px;
+            width: 320px;
             z-index: -1;
         }
         @media(max-width:1600px){            
@@ -95,6 +95,7 @@
     }
 
     &__content {
+        flex-shrink: 1;
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 45px;

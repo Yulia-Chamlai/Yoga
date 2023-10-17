@@ -3,19 +3,36 @@
 
     &__title {
         margin-bottom: 50px;
+        @media(max-width:1100px){
+            font-size: 75px;
+        }
+        @media(max-width:570px){
+           font-size: 45px;
+           text-align: center;
+        } 
+        @media(max-width:470px){
+           font-size: 30px;
+        } 
     }
 
     &__inner {
         display: flex;
         gap: 70px;
+        justify-content: center;
+        @media(max-width:740px){
+          gap: 40px;
+        } 
+        @media(max-width:570px){
+          flex-wrap: wrap;
+          justify-content: center;
+        } 
     }
 
     &__item {
         text-align: center;
         position: relative; 
         transition:  all 0.5s; 
-        max-height: 600px;
-       
+        max-height: 600px;       
         &:hover{
             .workshop__item-box::before{
                 background: linear-gradient(180deg, rgba(8, 12, 20, 0.00) 0%, 
@@ -29,7 +46,10 @@
                 opacity: 1;
                 visibility: visible;
             }
-        }                  
+        } 
+        @media(max-width:840px){
+           max-height: 360px;
+        }                 
     }
     &__item-box{
         position: relative;
@@ -57,6 +77,9 @@
         width: 100%;
         display: block;
         border-radius: 5px;
+        @media(max-width:840px){
+            height: 360px;
+        }
        
     }
     &__item-info{
@@ -64,17 +87,50 @@
         z-index: 2;
         top: -34%;
         padding: 0 50px 38px 50px;
+        @media(max-width:1470px){
+            top: -52%;
+        }
+        @media(max-width:1100px){
+            line-height: 133.5%;
+        }
+        @media(max-width:840px){
+           top: -70%;
+          } 
     }
     &__item-title{
         font-size: 35px;
         font-weight: 500;
         color: $accent-color;
         margin-bottom: 15px;
+        @media(max-width:1100px){
+            font-size: 28px;
+        }
+        @media(max-width:840px){
+           font-size: 20px;
+           margin-bottom: 10px;
+         }  
     }
     &__descr {
         font-size: 20px;
         font-weight: 300;
         margin-bottom: 33px;
+        @media(max-width:1100px){
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        @media(max-width:840px){
+           font-size: 14px;
+           margin-bottom: 10px;
+         }  
+    }
+    &__links{
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media(max-width:840px){
+            gap: 10px;
+          } 
     }
     &__buy-link {
         display: inline-block;
@@ -86,7 +142,11 @@
         text-align: center;
         font-size: 25px;
         border-radius: 10px;
-        margin-right: 25px;
+        @media(max-width:840px){
+            font-size: 14px;
+            padding: 8px 25px;
+            max-width: 200px;
+        }         
     }
     &__link {
         display: inline-flex;
@@ -110,7 +170,20 @@
             top: 50%;
             right: 95px;
             transform: translateY(-50%);
-        }     
+        }   
+        @media(max-width:840px){
+            font-size: 14px;
+            padding: 8px 59px;
+            max-width: 200px;
+            &::before{
+                right: 50px;
+            }
+        }   
+        @media(max-width:640px){           
+            &::before{
+                right: 32px;
+            }
+        }   
     }
 
     &__date {
@@ -127,6 +200,14 @@
         left: 38px;
         opacity: 0;
         visibility: hidden;
+        @media(max-width: 840px){
+            padding: 4px 22px 7px;
+            font-size: 20px;
+        }
+        @media(max-width: 740px){           
+            font-size: 14px;
+            left: 0;
+        }
     }
 
     &__level {        
@@ -135,6 +216,14 @@
         right: -139px;
         opacity: 0;
         visibility: hidden;
+        @media(max-width: 840px){
+            top: 100px;
+            right: -100px;
+        }       
+        @media(max-width: 740px){
+            top: 61px;
+            right: -61px;
+        }       
     }
 }
 .level{
@@ -148,4 +237,12 @@
     max-width: 232px;
     border-radius: 28px 28px 0 0;
     transform: rotate(90deg);
+    @media(max-width: 840px){
+        font-size: 20px;
+    }
+    @media(max-width: 740px){           
+        font-size: 14px;
+        padding: 3px 44px 3px;
+        border-radius: 0 0 28px 28px ;
+    }
 }
