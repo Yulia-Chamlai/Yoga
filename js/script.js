@@ -110,3 +110,6 @@ $(".top__slider").slick({
       menuBtn.classList.remove('active');
     })
   })
+ $(function(){
+   new WOW().init();
+ });

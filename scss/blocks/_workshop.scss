@@ -18,11 +18,11 @@
     &__inner {
         display: flex;
         max-width: 1520px;
-        padding: 0 30px;
-        gap: 70px;      
-        @media(max-width:740px){
-          gap: 40px;
-        } 
+        padding: 0 30px;        
+        gap: 70px;   
+        @media(max-width:1570px){
+            gap: 50px;
+          }    
         @media(max-width:570px){
           flex-wrap: wrap;
           justify-content: center;
@@ -88,7 +88,7 @@
         z-index: 2;
         top: -34%;
         padding: 0 50px 38px 50px;
-        @media(max-width:1470px){
+        @media(max-width:1570px){
             top: -52%;
         }
         @media(max-width:1100px){

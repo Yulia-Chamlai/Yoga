@@ -622,6 +622,7 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 -20px;
   top: 0;
   left: 0;
   right: 0;
@@ -1365,9 +1366,9 @@ template {
     left: 40%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 570px) {
   .teacher__dots-btn--left {
-    left: 35%;
+    left: 30%;
   }
 }
 .teacher__dots-btn--right {
@@ -1383,9 +1384,9 @@ template {
     right: 40%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 570px) {
   .teacher__dots-btn--right {
-    right: 35%;
+    right: 30%;
   }
 }
 
@@ -1838,9 +1839,9 @@ template {
   padding: 0 30px;
   gap: 70px;
 }
-@media (max-width: 740px) {
+@media (max-width: 1570px) {
   .workshop__inner {
-    gap: 40px;
+    gap: 50px;
   }
 }
 @media (max-width: 570px) {
@@ -1912,7 +1913,7 @@ template {
   top: -34%;
   padding: 0 50px 38px 50px;
 }
-@media (max-width: 1470px) {
+@media (max-width: 1570px) {
   .workshop__item-info {
     top: -52%;
   }
@@ -2427,7 +2428,7 @@ template {
 .product__item:hover .product__item-link {
   border: 1px solid #48B84A;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1570px) {
   .product__item {
     margin-bottom: 25px;
   }
@@ -2825,7 +2826,7 @@ template {
     bottom: 33px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1650px) {
   .courses .play-btn {
     width: 60px;
     height: 60px;

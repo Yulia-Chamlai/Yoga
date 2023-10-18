@@ -143,10 +143,7 @@
         @media(max-width:470px){
            top: 46%;
           }  
-        // transition:  all 0.3s;  
-        // &:hover{
-        //     color: $accent-color;
-        // }    
+          
         img{
             width: 35px;
             height: 35px;
@@ -160,8 +157,8 @@
         @media(max-width:810px){
            left: 40%;
         }
-        @media(max-width:470px){
-           left: 35%;
+        @media(max-width:570px){
+           left: 30%;
         }
     }
     &__dots-btn--right{
@@ -172,8 +169,8 @@
         @media(max-width:810px){
            right: 40%;
         }
-        @media(max-width:470px){
-           right: 35%;
+        @media(max-width:570px){
+           right: 30%;
         }
     }   
 }
