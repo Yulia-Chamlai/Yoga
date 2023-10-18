@@ -6,7 +6,7 @@
     &__title {
         max-width: 822px;
         margin-left: auto;
-        @media(max-width:1600px){
+        @media(max-width:1700px){
             margin-left: 570px;
         }  
         @media(max-width:1400px){
@@ -28,7 +28,7 @@
     &__inner {
         display: flex;
         gap: 118px;
-        @media(max-width:1600px){
+        @media(max-width:1700px){
            gap: 80px;
         } 
         @media(max-width:900px){
@@ -147,7 +147,7 @@
             width: 170px;
             height: 118px;
         }  
-        @media(max-width:1600px){
+        @media(max-width:1700px){
             &::before,
             &::after{
                 display: none;

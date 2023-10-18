@@ -2,19 +2,38 @@
     margin-bottom: 55px;
     &__title {
         margin-bottom: 50px;
+        @media(max-width:1542px){
+            text-align: center;
+        } 
+        @media(max-width:1100px){
+           font-size: 75px;
+        }
+        @media(max-width:570px){
+            font-size: 45px;           
+        } 
+         @media(max-width:470px){
+            font-size: 30px;
+        } 
     }
 
     &__inner {
         display: flex;
         gap: 60px;
-
+        flex-wrap: wrap-reverse;       
     }
     &__descr {
-        max-width: 623px;        
+        max-width: 623px; 
+        width: 100%;
+        @media(max-width:1542px){
+           max-width: 100%;
+        }      
     }
     &__text {
         font-size: 25px;
         margin-bottom: 30px;
+        @media(max-width:570px){
+           font-size: 18px;
+         } 
     }
 
     &__link {
@@ -40,6 +59,9 @@
     &__content {
         text-align: center;
         position: relative;
+        @media(max-width:1542px){
+           margin: 0 auto;
+         } 
 
     }
     &__image-box {
@@ -66,12 +88,28 @@
         left: 0;
         right: 0;
         bottom: 135px;
+        @media(max-width:840px){
+            bottom: 100px;               
+        }
+        @media(max-width:740px){
+            bottom: 85px;               
+        }
+        @media(max-width:670px){
+          bottom: 70px;             
+        }
     }
     &__info-title {
         font-size: 30px;
         color: $accent-color;
         margin-bottom: 18px;
         font-weight: 500;
+        @media(max-width:570px){
+            font-size: 20px;
+            line-height: 133.5%;                
+        }
+        @media(max-width:540px){
+            display: none;               
+        }
     }
     &__teacher-name {
         font-size: 30px;
@@ -90,6 +128,14 @@
             width: 42px;
             height: 42px;
         }
+        @media(max-width:570px){
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 133.5%;                
+        }
+        @media(max-width:540px){
+            display: none;               
+        }
     }
 
     &__buy-link {
@@ -104,12 +150,21 @@
         border-radius: 10px;
         padding: 15px;
         position: absolute;
-        transform: translateX(-40%);
+        transform: translateX(-50%);
         bottom: 55px;
+        @media(max-width:740px){
+            bottom: 20px;               
+        }
+        @media(max-width:670px){
+            max-width: 300px;
+            font-size: 20px;  
+            padding: 10px;
+            bottom: 0;                
+        }
     }
     &__time{
-        width: 224px;
-        height: 224px;
+        width: 198px;
+        height: 198px; 
         border-radius: 50%;
         background-color: $accent-color;
         font-size: 80px;
@@ -121,8 +176,17 @@
         outline: 1px solid #080C14;
         outline-offset: -8px;
         position: absolute;
-        top: -120px;
-        right: -120px;
+        top: -58px;
+        right: 0;
+        @media(max-width:670px){
+            width: 140px;
+            height: 140px;
+            font-size: 50px;   
+            top: -50px;                   
+        }
+        @media(max-width:540px){
+            display: none;               
+        }
     }
 }
 .play-btn{
@@ -135,4 +199,11 @@
     top: 41%;
     left: 44%;
     padding: 0;
+    @media(max-width:740px){
+        width: 50px;
+        height: 50px;  
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
 }

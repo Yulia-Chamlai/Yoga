@@ -1,11 +1,19 @@
 .subscription {
     margin-bottom: 50px;  
-    text-align: center;  
-    position: relative;   
+    text-align: center;    
 
     &__title {
         text-align: center;
         margin-bottom: 30px;
+        @media(max-width:1100px){
+            font-size: 75px;
+        }
+        @media(max-width:570px){
+           font-size: 45px;           
+        } 
+        @media(max-width:470px){
+           font-size: 30px;
+        } 
     }
     &__text {
         font-size: 20px;
@@ -20,6 +28,7 @@
         gap: 8px;
         flex-wrap: wrap;
         margin: 0 auto;
+        position: relative; 
     }
     &__form-input {
         max-width: 715px;
@@ -52,8 +61,9 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 170px;
-        right: 67px;
+        bottom: 0;
+        bottom: -20px;
+        right: -100px;
         gap: 31px;
         a{
             display: inline-flex;
